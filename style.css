@@ -1,14 +1,21 @@
 body{
-    background-color: lightgoldenrodyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
 }
 .row{
     display: flex;
 }
-main{
+
+#calculator{
+    padding: 10px;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: stretch;
+    justify-content: center;
+    background-color: grey;
 }
 button{
     background-color: darkgrey;
@@ -22,6 +29,29 @@ button{
 #results{
     width: 300px;
     height: 40px;
+    margin-bottom: 20px;
     background-color: black;
     color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+}
+#divide,
+.bottombuttons{
+    width: 150px;
+}
+#zero,
+.from0to9{
+    background-color: lightcoral;
+    color: black;
+}
+.operator{
+    background-color: darkorange;
+    color: black;
+}
+#equal,
+#clear{
+    background-color: darkkhaki;
+    color: black;
 }
