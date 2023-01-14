@@ -9,37 +9,41 @@
 </head>
 <body>
     <main>
+    <div id="calculator">
     <p id="smallheader"></p>
-        <div id="results"></div>
+        <div id="results">0</div>
 
         <div class="row">
-            <button id="plus">+</button>
-            <button id="minus">-</button>
-            <button id="multiply">x</button>
+            <button id="plus" class="operator">+</button>
+            <button id="minus" class="operator">-</button>
+            <button id="multiply" class="operator">x</button>
         </div>
         <div class="row">
-            <button id="seven" class="from1to9">7</button>
-            <button id="eight" class="from1to9" >8</button>
-            <button id="nine" class="from1to9">9</button>
+            <button id="seven" class="from0to9">7</button>
+            <button id="eight" class="from0to9" >8</button>
+            <button id="nine" class="from0to9">9</button>
         </div>
         <div class="row">
-            <button id="four" class="from1to9">4</button>
-            <button id="five" class="from1to9">5</button>
-            <button id="six" class="from1to9">6</button>
+            <button id="four" class="from0to9">4</button>
+            <button id="five" class="from0to9">5</button>
+            <button id="six" class="from0to9">6</button>
         </div>    
         <div class="row">
-            <button id="one" class="from1to9">1</button>
-            <button id="two" class="from1to9">2</button>
-            <button id="three" class="from1to9">3</button>
+            <button id="one" class="from0to9">1</button>
+            <button id="two" class="from0to9">2</button>
+            <button id="three" class="from0to9">3</button>
         </div>
         <div class="row">
-            <button id="zero">0</button>
-            <button id="clear">clear</button>
-            <button id="divide">/</button>
+            <button id="zero"  class="bottombuttons">0</button>
+            <button id="divide" class="operator">/</button>
         </div>
-            <button id="equal">=</button>
+        <div class="row">
+            <button id="equal" class="bottombuttons">=</button>
+            <button id="clear" class="bottombuttons">clear</button>
+        </div>
         <script src="../JavaScriptCalculator/script.js"></script>
     <footer id="smallfooter"></footer>
+    </div>
     </main>
 
     
