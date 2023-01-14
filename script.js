@@ -1,27 +1,4 @@
-function addOperation (a,b){
-    return a+b
-}
-function subtractOperation (a,b){
-    return a-b 
-}
-function multiplyOperation (a,b){
-    return a*b
-}
-function divideOperation (a,b){
-    return a/b    
-}
-function operate(a,operator,b){
-    if(operator =="+"){
-        return add(a,b)
-    }else if(operator =="-"){
-        return subtract(a,b)
-    }else if(operator =="*"){
-        return multiply(a,b)
-    }else if(operator =="/"){
-        return divide(a,b)
-    }
 
-}
 let results = document.getElementById("results")
 
 let one = document.getElementById("one")
@@ -69,6 +46,7 @@ nine.addEventListener("click",function(){
     document.getElementById("results").innerHTML += "9"
 })
 
+
 let plus = document.getElementById("plus")
 plus.addEventListener("click",function(){
     document.getElementById("results").innerHTML += "+"
@@ -89,3 +67,50 @@ divide.addEventListener("click",function(){
     document.getElementById("results").innerHTML += "/"
 })
 
+
+/* if user clicks a number for the furst time subtitute the zero for the pressed 
+if he presses a an operator 0 + operator 
+
+after pressing the operator only buttons that work are numbers
+
+clear => returns the div to 0
+
+
+
+
+
+
+
+
+
+
+*/
+
+// OPERATIONS
+/*
+function addOperation (a,b){
+    return a+b
+}
+function subtractOperation (a,b){
+    return a-b 
+}
+function multiplyOperation (a,b){
+    return a*b
+}
+function divideOperation (a,b){
+    return a/b    
+}
+function operate(a,operator,b){
+    if(operator =="+"){
+        return add(a,b)
+    }else if(operator =="-"){
+        return subtract(a,b)
+    }else if(operator =="*"){
+        return multiply(a,b)
+    }else if(operator =="/"){
+        return divide(a,b)
+    }
+
+}
+
+*/
