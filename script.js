@@ -17,8 +17,53 @@ AFTER AN OPERATOR IS CLICK IF A DIFFERENT ONE IS PRESSED SUBSTITUTE THE CURRENT 
 
 
 // QUIERO QUE TODOS LOS BOTONES TENGA SU FUNCION Y SE ACTIVE CON UN CLICK y que sea aplicable para todos
+let displayNumbers = document.getElementById("results")
 
+displayNumbers.innerHTML = "0"
+displayNumberJS = "0"
 
+// numbers buttons
+
+let numberZero = document.getElementById("zero")
+numberZero.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        
+    }else{
+        displayNumbers.innerHTML += "0"
+        displayNumberJS += "0"
+    }
+})
+
+let numberOne = document.getElementById("one")
+numberOne.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML = 1
+        displayNumberJS = "1"
+        
+    }else{
+        displayNumbers.innerHTML += "1"
+        displayNumberJS += "1"
+    }
+})
+
+//operators buttons
+
+let addition = document.getElementById("plus")
+addition.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML += "+"
+        
+    }else{
+        displayNumbers.innerHTML += "+"
+        displayNumberJS += "+"
+    }
+})
 
 
 
@@ -64,6 +109,15 @@ function fromStringToOperation(strOperation){
     }
     // add a way to first round up to two numbers
     // and then display it on the results div
+    
+
     return answer
 }
-console.log(fromStringToOperation("121/233"))
+
+// equal button
+
+let equalButton = document.getElementById("equal")
+equalButton.addEventListener("click", function (){
+    console.log(displayNumberJS)
+    
+})
