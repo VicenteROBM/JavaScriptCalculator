@@ -18,28 +18,52 @@ AFTER AN OPERATOR IS CLICK IF A DIFFERENT ONE IS PRESSED SUBSTITUTE THE CURRENT 
 
 // QUIERO QUE TODOS LOS BOTONES TENGA SU FUNCION Y SE ACTIVE CON UN CLICK y que sea aplicable para todos
 
-const results = document.getElementById("results")
 
-let FirstNumber = "0"
-let SecondNumer = ""
-let result.innerHTML = FirstNumber
 
-const one = document.getElementById("one")
 
-function numberOne (){
-    if(resultsJS == "0"){
-        resultsJS = "1"
-        results.innerHTML = resultsJS
-    }else{
-        resultsJS += "1"
-        results.innerHTML = resultsJS
+
+
+
+
+function fromStringToOperation(strOperation){
+    let answer =0;
+    for (let i= 0; i< strOperation.length; i++){
+        
+        // transforming from String to sum
+        if(strOperation[i]=="+"){
+            let firstNumber = strOperation.substring(0,i)
+            let SecondNumber = strOperation.substring(i+1,strOperation.length)
+            firstNumber = +firstNumber
+            SecondNumber = +SecondNumber
+            answer = firstNumber + SecondNumber
+        }
+        // transforming from String to substraction
+        if(strOperation[i]=="-"){
+            let firstNumber = strOperation.substring(0,i)
+            let SecondNumber = strOperation.substring(i+1,strOperation.length)
+            firstNumber = +firstNumber
+            SecondNumber = +SecondNumber
+            answer = firstNumber - SecondNumber
+        }
+        // transforming from String to multiplication
+        if(strOperation[i]=="*"){
+            let firstNumber = strOperation.substring(0,i)
+            let SecondNumber = strOperation.substring(i+1,strOperation.length)
+            firstNumber = +firstNumber
+            SecondNumber = +SecondNumber
+            answer = firstNumber * SecondNumber
+        }
+        // transforming from String to division
+        if(strOperation[i]=="/"){
+            let firstNumber = strOperation.substring(0,i)
+            let SecondNumber = strOperation.substring(i+1,strOperation.length)
+            firstNumber = +firstNumber
+            SecondNumber = +SecondNumber
+            answer = firstNumber / SecondNumber
+        }
     }
-    
+    // add a way to first round up to two numbers
+    // and then display it on the results div
+    return answer
 }
-
-function operate (FirstNumber,SecondNumer){
-    a = +a
-    b = +b
-    return a+b
-}
-console.log(operate(a,b))
+console.log(fromStringToOperation("121/233"))
