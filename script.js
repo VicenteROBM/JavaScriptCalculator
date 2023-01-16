@@ -1,116 +1,45 @@
+/* FIRST I NEED EACH BUTTON TO WORK
 
-let results = document.getElementById("results")
+CERTAIN CONDITIONS
 
-let one = document.getElementById("one")
-one.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "1"
-})
+IF THE DIV .INNER HTML == 0 THEN WHEN THE USER PRESSES A NUMBER SUBSTITUTE IT 
+INSTEAD OF +=
 
-let two = document.getElementById("two")
-two.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "2"
-})
+WHEN A USER PRESSES AN OPERATOR ALL THE NUMBERS BEHIND THE OPERATOR = A
 
-let three = document.getElementById("three")
-three.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "3"
-})
+WHEN THE USER PRESSES EQUAL OR AN OPERATOR FOR THE SECOND TIME, EVERYTHING FROM THE
+FIRST OPERATOR TO THE END = B
 
-let four = document.getElementById("four")
-four.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "4"
-})
+FUNCTION OPERATION (A,B)
 
-let five = document.getElementById("five")
-five.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "5"
-})
-
-let six = document.getElementById("six")
-six.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "6"
-})
-
-let seven = document.getElementById("seven")
-seven.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "7"
-})
-
-let eight = document.getElementById("eight")
-eight.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "8"
-})
-
-let nine = document.getElementById("nine")
-nine.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "9"
-})
-
-
-let plus = document.getElementById("plus")
-plus.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "+"
-})
-
-let minus = document.getElementById("minus")
-minus.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "-"
-})
-
-let multiply = document.getElementById("multiply")
-multiply.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "x"
-})
-
-let divide = document.getElementById("divide")
-divide.addEventListener("click",function(){
-    document.getElementById("results").innerHTML += "/"
-})
-
-
-/* if user clicks a number for the furst time subtitute the zero for the pressed 
-if he presses a an operator 0 + operator 
-
-after pressing the operator only buttons that work are numbers
-
-clear => returns the div to 0
-
-
-
-
-
-
-
-
-
-
+AFTER AN OPERATOR IS CLICK IF A DIFFERENT ONE IS PRESSED SUBSTITUTE THE CURRENT ONE
 */
 
-// OPERATIONS
-/*
-function addOperation (a,b){
+
+// QUIERO QUE TODOS LOS BOTONES TENGA SU FUNCION Y SE ACTIVE CON UN CLICK y que sea aplicable para todos
+
+const results = document.getElementById("results")
+
+let FirstNumber = "0"
+let SecondNumer = ""
+let result.innerHTML = FirstNumber
+
+const one = document.getElementById("one")
+
+function numberOne (){
+    if(resultsJS == "0"){
+        resultsJS = "1"
+        results.innerHTML = resultsJS
+    }else{
+        resultsJS += "1"
+        results.innerHTML = resultsJS
+    }
+    
+}
+
+function operate (FirstNumber,SecondNumer){
+    a = +a
+    b = +b
     return a+b
 }
-function subtractOperation (a,b){
-    return a-b 
-}
-function multiplyOperation (a,b){
-    return a*b
-}
-function divideOperation (a,b){
-    return a/b    
-}
-function operate(a,operator,b){
-    if(operator =="+"){
-        return add(a,b)
-    }else if(operator =="-"){
-        return subtract(a,b)
-    }else if(operator =="*"){
-        return multiply(a,b)
-    }else if(operator =="/"){
-        return divide(a,b)
-    }
-
-}
-
-*/
+console.log(operate(a,b))
