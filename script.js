@@ -50,6 +50,118 @@ numberOne.addEventListener("click",function(){
     }
 })
 
+let numberTwo = document.getElementById("two")
+numberTwo.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML = 2
+        displayNumberJS = "2"
+        
+    }else{
+        displayNumbers.innerHTML += "2"
+        displayNumberJS += "2"
+    }
+})
+
+let numberThree = document.getElementById("three")
+numberThree.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML = 3
+        displayNumberJS = "3"
+        
+    }else{
+        displayNumbers.innerHTML += "3"
+        displayNumberJS += "3"
+    }
+})
+
+let numberFour = document.getElementById("four")
+numberFour.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML = 4
+        displayNumberJS = "4"
+        
+    }else{
+        displayNumbers.innerHTML += "4"
+        displayNumberJS += "4"
+    }
+})
+
+let numberFive = document.getElementById("five")
+numberFive.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML = 5
+        displayNumberJS = "5"
+        
+    }else{
+        displayNumbers.innerHTML += "5"
+        displayNumberJS += "5"
+    }
+})
+
+let numberSix = document.getElementById("six")
+numberSix.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML = 6
+        displayNumberJS = "6"
+        
+    }else{
+        displayNumbers.innerHTML += "6"
+        displayNumberJS += "6"
+    }
+})
+
+let numberSeven = document.getElementById("seven")
+numberSeven.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML = 7
+        displayNumberJS = "7"
+        
+    }else{
+        displayNumbers.innerHTML += "7"
+        displayNumberJS += "7"
+    }
+})
+
+let numberEight = document.getElementById("eight")
+numberEight.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML = 8
+        displayNumberJS = "8"
+        
+    }else{
+        displayNumbers.innerHTML += "8"
+        displayNumberJS += "8"
+    }
+})
+
+let numberNine = document.getElementById("nine")
+numberNine.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML = 9
+        displayNumberJS = "9"
+        
+    }else{
+        displayNumbers.innerHTML += "9"
+        displayNumberJS += "9"
+    }
+})
+
 //operators buttons
 
 let addition = document.getElementById("plus")
@@ -65,7 +177,44 @@ addition.addEventListener("click",function(){
     }
 })
 
+let minus = document.getElementById("minus")
+minus.addEventListener("click",function(){
 
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML += "-"
+        
+    }else{
+        displayNumbers.innerHTML += "-"
+        displayNumberJS += "-"
+    }
+})
+
+let multiply = document.getElementById("multiply")
+multiply.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML += "x"
+        
+    }else{
+        displayNumbers.innerHTML += "x"
+        displayNumberJS += "x"
+    }
+})
+
+let division = document.getElementById("divide")
+division.addEventListener("click",function(){
+
+    // if the calculator already show 0 it replaces it with the number
+    if(displayNumbers.innerHTML == "0"){
+        displayNumbers.innerHTML += "/"
+        
+    }else{
+        displayNumbers.innerHTML += "/"
+        displayNumberJS += "/"
+    }
+})
 
 
 
@@ -91,7 +240,7 @@ function fromStringToOperation(strOperation){
             answer = firstNumber - SecondNumber
         }
         // transforming from String to multiplication
-        if(strOperation[i]=="*"){
+        if(strOperation[i]=="x"){
             let firstNumber = strOperation.substring(0,i)
             let SecondNumber = strOperation.substring(i+1,strOperation.length)
             firstNumber = +firstNumber
@@ -111,6 +260,8 @@ function fromStringToOperation(strOperation){
     // and then display it on the results div
     
 
+    displayNumberJS = answer
+    displayNumbers.innerHTML  = answer
     return answer
 }
 
@@ -118,6 +269,13 @@ function fromStringToOperation(strOperation){
 
 let equalButton = document.getElementById("equal")
 equalButton.addEventListener("click", function (){
-    console.log(displayNumberJS)
+    console.log(fromStringToOperation(displayNumberJS))
     
+})
+
+// clear button
+let clearButton = document.getElementById("clear")
+clearButton.addEventListener("click", function(){
+    displayNumberJS = "0"
+    displayNumbers.innerHTML  = "0"
 })
